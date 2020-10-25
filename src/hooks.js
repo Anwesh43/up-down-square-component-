@@ -53,6 +53,7 @@ export const useStyle = (w, h, scale) => {
     const position = 'absolute'
     const border = '1px solid green'
     const background = 'green' 
+    const parts = 4
     const sf = sinify(scale)
     return {
         parentStyle() {
@@ -60,7 +61,7 @@ export const useStyle = (w, h, scale) => {
             const height = `${size}px`
             const top = `${y}px`
             const left = `${x}px`
-            const WebkitTransform = `rotate(${90 * divideScale(sf, 2, 3)}deg)`
+            const WebkitTransform = `rotate(${90 * divideScale(sf, 2, parts)}deg)`
             return {
                 position, 
                 width,
@@ -75,7 +76,7 @@ export const useStyle = (w, h, scale) => {
         rectStyle(i) {
             const rh = size / 2
             const height = `${rh}px`
-            const width = `${size * divideScale(sf, i, 3)}px`
+            const width = `${size * divideScale(sf, i, parts)}px`
             const top = `${rh * i}px`
             const left = '0px'
             return {width, height, position, left, top, background}

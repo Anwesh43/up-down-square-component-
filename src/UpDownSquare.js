@@ -1,5 +1,7 @@
 import React from 'react'
-import useStyle from './hooks'
+import {
+  useStyle
+ } from './hooks'
 
 const UpDowSquare = ({w, h, scale, onClick}) => {
     const {parentStyle, rectStyle} = useStyle(w, h, scale)

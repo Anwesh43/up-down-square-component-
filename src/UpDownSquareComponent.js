@@ -9,7 +9,7 @@ const UpDownSquareComponent = (props) => {
     const { 
         scale,
         start
-    } = useAnimatedScale(0.02, 20)
+    } = useAnimatedScale(0.02 / 4, 20)
     const { 
         w,
         h
@@ -19,3 +19,5 @@ const UpDownSquareComponent = (props) => {
       </UpDownSquare>
     )
 }
+
+export default UpDownSquareComponent
